@@ -7,5 +7,7 @@ Template.editor.rendered = function() {
 }
 
 Template.editor.events({
-  
+  'keydown #main-editor': function() {
+    console.log('test');
+  }
 });
