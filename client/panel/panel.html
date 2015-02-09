@@ -12,8 +12,11 @@
     </div>
     <div class="row">
         {{#each books}}
-            <div class="col-md-3">
-                {{title}}
+            <div class="book-group btn-group col-md-2" role="group" aria-label="...">
+                <div class="row">
+                    <button id={{_id}} class="doc-btn col-md-9 btn btn-default"> {{title}} </button>
+                    <button class="col-md-2 delete-doc btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+                </div>
             </div>
         {{/each}}
     </div>

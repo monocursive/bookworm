@@ -6,8 +6,20 @@ Template.editor.rendered = function() {
   });
 }
 
+Template.editor.helpers({
+  text: function() {
+    var bookId = Session.get("document");
+    return Books.find(bookId);
+  }
+});
+
 Template.editor.events({
-  'keydown #main-editor': function() {
-    console.log('test');
+  'keyup #main-editor': function() {
+    var bookContent = $("#main-editor").val();
+    Books.update({_id: Session.get("document")},
+      { $set: {
+        content: bookContent
+      }
+    });
   }
 });
