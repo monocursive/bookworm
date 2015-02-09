@@ -11,6 +11,5 @@ nemo64:bootstrap
 momentjs:moment
 less
 useraccounts:bootstrap
-msavin:mongoinspector
 autopublish
 ground:db

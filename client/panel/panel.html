@@ -1,8 +1,21 @@
 <template name="panel">
     <div class="row">
-        <div class="col-md-3">
-            test yo
+        <div id="doc-form" class="col-md-4">
+            <div class="input-group">
+                <input name="book-title" type="text" value="" placeholder="New document's title" class="form-control" rows="10" />
+                <span class="input-group-btn">
+                    <button id="new-doc" class="btn btn-default">Create</button>
+                </span>
+            </div>
         </div>
+
+    </div>
+    <div class="row">
+        {{#each books}}
+            <div class="col-md-3">
+                {{title}}
+            </div>
+        {{/each}}
     </div>
 
 
