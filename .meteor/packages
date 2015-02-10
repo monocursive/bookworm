@@ -11,6 +11,5 @@ nemo64:bootstrap
 momentjs:moment
 less
 useraccounts:bootstrap
-autopublish
 ground:db
 chuangbo:marked
