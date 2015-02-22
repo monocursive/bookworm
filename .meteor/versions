@@ -18,13 +18,13 @@ email@1.0.5
 fastclick@1.0.2
 follower-livedata@1.0.3
 geojson-utils@1.0.2
-ground:db@0.3.6
+ground:db@0.3.1
 ground:dictionary@0.2.0
 ground:localstorage@0.1.7
-ground:minimax@1.1.2
+ground:minimax@1.1.0
 ground:servertime@0.0.3
 ground:store@0.1.1
-ground:util@0.1.13
+ground:util@0.1.9
 html-tools@1.0.3
 htmljs@1.0.3
 http@1.0.10
@@ -77,7 +77,7 @@ tracker@1.0.5
 ui@1.0.5
 underscore@1.0.2
 url@1.0.3
-useraccounts:bootstrap@1.6.1
-useraccounts:core@1.6.1
+useraccounts:bootstrap@1.4.1
+useraccounts:core@1.4.1
 webapp@1.1.6
 webapp-hashing@1.0.2

@@ -15,7 +15,7 @@ Template.panel.events({
       userId: userId,
       title: inputBook.val(),
       content: ""
-    }
+      };
     Books.insert(book, function(err, res) {
       if(err) {
         alert('Problemo')
