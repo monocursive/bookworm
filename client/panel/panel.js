@@ -16,15 +16,15 @@ Template.panel.events({
       title: inputBook.val(),
       content: ""
       };
+
     Books.insert(book, function(err, res) {
       if(err) {
         alert('Problemo')
       } else {
         var previousDoc = Session.get("document");
         $('#' + previousDoc).removeClass('btn-success');
-        Session.set("document", res);
         $('#' + res).addClass('btn-success');
-
+        Session.set("document", res);
       }
     });
     inputBook.val("");
