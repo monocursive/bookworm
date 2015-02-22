@@ -44,6 +44,7 @@ Template.panel.events({
 
     if(confirm('Are you sure?')) {
       Books.remove(this._id);
+      Session.set("document", "");
     }
   }
 });

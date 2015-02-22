@@ -4,7 +4,23 @@ Template.editor.rendered = function() {
     savable:false,
     height: "800px"
   });
-}
+  Tracker.autorun(function() {
+    setInterval(function () {
+      var currentDoc = Session.get("document");
+      var saveContent = $("#main-editor").val();
+      if(Session.get("document") != "") {
+        console.log(currentDoc);
+        Archives.insert({
+          date: Date(),
+          content: saveContent,
+          docId: currentDoc
+        });
+      }
+
+    }, 5000);
+ });
+
+};
 
 Template.editor.helpers({
   text: function() {
