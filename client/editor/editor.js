@@ -11,13 +11,13 @@ Template.editor.rendered = function() {
       if(Session.get("document") != "") {
         console.log(currentDoc);
         Archives.insert({
-          date: Date(),
+          date: new Date(),
           content: saveContent,
           docId: currentDoc
         });
       }
 
-    }, 5000);
+    }, 10000);
  });
 
 };
