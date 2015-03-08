@@ -4,21 +4,23 @@ Template.editor.rendered = function() {
     savable:false,
     height: "800px"
   });
-  Tracker.autorun(function() {
-    setInterval(function () {
-      var currentDoc = Session.get("document");
-      var saveContent = $("#main-editor").val();
-      if(Session.get("document") != "") {
-        console.log(currentDoc);
-        Archives.insert({
-          date: new Date(),
-          content: saveContent,
-          docId: currentDoc
-        });
-      }
-
-    }, 10000);
- });
+  if(archiveSave) {
+    Meteor.clearInterval(archiveSave);
+  }
+  var archiveSave =  Meteor.setInterval(function () {
+    var currentDoc = Session.get("document");
+    var saveContent = $("#main-editor").val();
+    var saveTitle = Books.find(currentDoc).fetch()[0].title;
+    if(Session.get("document") != "") {
+      console.log(saveTitle);
+      Archives.insert({
+        date: new Date(),
+        content: saveContent,
+        docId: currentDoc,
+        title: saveTitle
+      });
+    }
+  }, 10000);
 
 };
 

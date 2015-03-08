@@ -1,5 +1,12 @@
 <template name="archives">
-    {{#each archivelist}}
-        {{docId}}
-    {{/each}}
+    <ul>
+        {{#each archivelist}}
+           {{> archiveEntry}}
+        {{/each}}
+    </ul>
+
+</template>
+
+<template name="archiveEntry">
+    <li>{{date}} - {{title}} <button id="{{docId}}" class="btn btn-success">Restore</button></li>
 </template>
