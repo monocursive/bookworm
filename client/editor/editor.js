@@ -20,7 +20,7 @@ Template.editor.rendered = function() {
         title: saveTitle
       });
     }
-  }, 10000);
+  }, 60000);
 
 };
 
