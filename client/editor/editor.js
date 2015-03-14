@@ -12,7 +12,6 @@ Template.editor.rendered = function() {
     var saveContent = $("#main-editor").val();
     var saveTitle = Books.find(currentDoc).fetch()[0].title;
     if(Session.get("document") != "") {
-      console.log(saveTitle);
       Archives.insert({
         date: new Date(),
         content: saveContent,
